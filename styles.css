@@ -64,6 +64,8 @@ html {
 
 body {
   margin: 0;
+  width: var(--desktop);
+  margin: 0 auto;
 }
 .dark {
   background-color: #040918;
@@ -134,7 +136,6 @@ body {
 .card {
   background-color: var(--n700);
   opacity: 0.8;
-  max-width: 350px;
   border-radius: 20px;
   padding: 10px;
   box-shadow: rgba(240, 240, 243, 0.2) 0px 7px 29px 0px;
@@ -208,13 +209,13 @@ body {
 }
 @media only screen and (max-width: 480px) {
   body {
-    font-size: 70%;
+    width: var(--mobile);
   }
   .grid {
     grid-template-columns: 1fr;
   }
   .container {
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
   .two-col {
     padding: 1rem 2rem;

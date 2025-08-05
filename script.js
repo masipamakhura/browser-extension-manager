@@ -4,6 +4,7 @@ let activeFilter = document.querySelector(".btn-active");
 let inActiveFilter = document.querySelector(".btn-inactive");
 let all = document.querySelector(".btn-all");
 let removeButtons = document.querySelectorAll(".remove");
+let originalData = [];
 
 const getData = async (filePath) => {
   try {
@@ -78,11 +79,11 @@ function updateGridComponent(component, arr) {
 
   activeFilter.addEventListener("click", function (ev) {
     ev.preventDefault();
-    activeListFilter(cardsContainer, arr);
+    activeListFilter(cardsContainer, originalData);
   });
   all.addEventListener("click", function (ev) {
     ev.preventDefault();
-    showAll(cardsContainer, arr);
+    showAll(cardsContainer, originalData);
   });
   inActiveFilter.addEventListener("click", function (ev) {
     ev.preventDefault();
@@ -157,7 +158,8 @@ window.addEventListener("load", function () {
 
   getData("/data.json").then((myArray) => {
     if (myArray) {
-      updateGridComponent(cardsContainer, myArray);
+      originalData = myArray;
+      updateGridComponent(cardsContainer, originalData);
     }
   });
 });
