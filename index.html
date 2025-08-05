@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+  <body class="dark">
+    <header>
+      <div class="header row">
+        <div class="two-col p-bt-sm">
+          <div class="logo"><img src="/assets/images/logo.svg" alt="Logo" /></div>
+          <div class="theme-indicator"><img src="/assets/images/icon-sun.svg" alt="Theme Indicator" /></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="two-col">
+          <div class="header-label">
+            <h1 class="primary-heading">Extensions List</h1>
+          </div>
+          <div class="app-state-controls">
+            <ul class="state-listing">
+              <li class="app-state"><a class="btn btn-all" href="#">All</a></li>
+              <li class="app-state"><a class="btn btn-active" href="#">Active</a></li>
+              <li class="app-state"><a class="btn btn-inactive" href="#">Inactive</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <div class="grid"></div>
+        </div>
+      </div>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
